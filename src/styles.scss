@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: #eee;
+  }
+  
+  #side_nav {
+    background: #000;
+    min-width: 250px;
+    max-width: 250px;
+  }
+  
+  .content {
+    min-height: 100vh;
+    width: 100%;
+    background: #b7c9c9;
+  }
+  
+  .sidebar li.active {
+    background: #eee;
+    border-radius: 8px;
+  }
+  
+  .sidebar li.active a, .sidebar li.active a:hover {
+    color: #000;
+  }
+  
+  .sidebar li a {
+    color: #fff;
+  }
+  
+  @media (max-width: 767px) {
+    #side_nav {
+      margin-left: -250px;
+      position: fixed;
+      min-height: 100vh;
+      z-index: 1;
+    }
+  
+    #side_nav.active{
+      margin-left: 0;
+    }
+  }
+  
+  .form-group {
+    padding: 10px;
+  }
