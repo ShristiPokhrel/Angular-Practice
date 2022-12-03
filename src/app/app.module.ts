@@ -26,7 +26,7 @@ import { TutorialsComponent } from './tutorials/tutorials.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
