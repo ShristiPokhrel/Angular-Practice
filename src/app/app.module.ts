@@ -10,6 +10,9 @@ import { AddTutorialsComponent } from './add-tutorials/add-tutorials.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TutorialsComponent } from './tutorials/tutorials.component';
+import { UserListComponent } from './user-management/user-list/user-list.component';
+import { AddUserComponent } from './user-management/add-user/add-user.component';
+import { EditUserComponent } from './user-management/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { TutorialsComponent } from './tutorials/tutorials.component';
     AddTutorialsComponent,
     HeaderNavComponent,
     SidebarComponent,
-    TutorialsComponent
+    TutorialsComponent,
+    UserListComponent,
+    AddUserComponent,
+    EditUserComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {TutorialsComponent} from './tutorials/tutorials.component';
 import {AddTutorialsComponent} from './add-tutorials/add-tutorials.component';
+import {UserListComponent} from './user-management/user-list/user-list.component';
+import {AddUserComponent} from './user-management/add-user/add-user.component';
+import {EditUserComponent} from './user-management/edit-user/edit-user.component';
 
 const routes: Routes = [
   {
@@ -16,6 +19,15 @@ const routes: Routes = [
   },
   {
     path: 'add-tutorials', component: AddTutorialsComponent
+  },
+  {
+    path: 'user-list', component: UserListComponent
+  },
+  {
+    path: 'add-user', component: AddUserComponent
+  },
+  {
+    path: 'edit-user', component: EditUserComponent
   },
   {
     path: '**', redirectTo: 'home', pathMatch: 'full'
