@@ -5,23 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DatePipe} from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { AddTutorialsComponent } from './add-tutorials/add-tutorials.component';
-import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { TutorialsComponent } from './tutorials/tutorials.component';
+import { AddTutorialsComponent } from './add-tutorials/add-tutorials.component';
 import { UserListComponent } from './user-management/user-list/user-list.component';
 import { AddUserComponent } from './user-management/add-user/add-user.component';
 import { EditUserComponent } from './user-management/edit-user/edit-user.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-    AddTutorialsComponent,
-    HeaderNavComponent,
     SidebarComponent,
+    HeaderNavComponent,
+    DashboardComponent,
     TutorialsComponent,
+    AddTutorialsComponent,
     UserListComponent,
     AddUserComponent,
     EditUserComponent,
@@ -30,6 +31,7 @@ import { EditUserComponent } from './user-management/edit-user/edit-user.compone
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [DatePipe],

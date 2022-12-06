@@ -7,3 +7,31 @@
     </div>
     <hr class="my-2" />
   </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>S.N</th>
+            <th>Name</th>
+            <th>Mobile Number</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of allUsersList; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.mobileNumber}}</td>
+            <td>{{user.email}}</td>
+            <td>
+              <button class="btn btn-sm btn-primary">View</button>
+              <button class="btn btn-sm btn-info">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="onDeleteClick(user.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -42,6 +42,7 @@ export class AddTutorialsComponent implements OnInit {
   }
 
   onSaveDetails() {
+    this.submitted = true;
     console.log("After submit form details: ", this.formDetails.value)
   }
 }

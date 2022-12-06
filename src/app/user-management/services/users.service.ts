@@ -15,8 +15,14 @@ export class UsersService {
 
 
   saveUser(data: AddUserRequestModel): Observable<any> {
-    return this.httpClient.post(environment.baseUrl, data);
+    return this.httpClient.post(environment.baseUrl + 'users', data);
+  }
+  listAllUsers(): Observable<any> {
+    return this.httpClient.get(environment.baseUrl + 'users');
   }
 
+  deleteUserById(id: number): Observable<any> {
+    return this.httpClient.delete(environment.baseUrl + 'users/' + `${id}`);
+  }
 
 }
