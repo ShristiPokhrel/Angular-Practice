@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-sm-12">
+      <h5>
+        <span class="me-3" (click)="onGoBack()" title="Click Here to Go Back">
+          <i class="fal fa-backward"></i>
+        </span>
+        View Details
+      </h5>
+    </div>
+    <hr class="my-2" />
+  </div>
+  
+  <div class="row">
+      <div class="col-sm-4">
+          <div class="form-group">
+              <label>Name :  {{userDetails?.name | titlecase}}</label>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="form-group">
+              <label>Email : {{userDetails?.email}}</label>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="form-group">
+              <label>Nobile Number : {{userDetails?.mobileNumber}} </label>
+          </div>
+      </div>
+      <div class="col-sm-4">
+          <div class="form-group">
+              <label>Password : {{userDetails?.password}}</label>
+          </div>
+      </div>
+  </div>

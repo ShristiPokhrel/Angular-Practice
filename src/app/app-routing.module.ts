@@ -6,6 +6,7 @@ import {AddTutorialsComponent} from './add-tutorials/add-tutorials.component';
 import {UserListComponent} from './user-management/user-list/user-list.component';
 import {AddUserComponent} from './user-management/add-user/add-user.component';
 import {EditUserComponent} from './user-management/edit-user/edit-user.component';
+import { DetailViewComponent } from './user-management/detail-view/detail-view.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,10 @@ const routes: Routes = [
     path: 'add-user', component: AddUserComponent
   },
   {
-    path: 'edit-user', component: EditUserComponent
+    path: 'edit-user/:id', component: EditUserComponent
+  },
+  {
+    path: 'view-user/:id', component: DetailViewComponent
   },
   {
     path: '**', redirectTo: 'home', pathMatch: 'full'

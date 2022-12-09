@@ -1,1 +1,70 @@
-<p>edit-user works!</p>
+<div class="row">
+    <div class="col-sm-12">
+      <h5> <span class="me-3" (click)="onGoBack()" title="Click Here to Go Back"> <i class="fal fa-backward"></i> </span> Edit User</h5>
+    </div>
+    <hr class="my-2" />
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <form [formGroup]="formDetails" class="users_fields">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" formControlName="name" name="name" id="name" class="form-control form-control-sm" placeholder="Enter Name" />
+              <span *ngIf="submitted || form['name'].touched || form['name'].dirty && form['name'].invalid"
+                    class="info-msg text-danger">
+                <small
+                  *ngIf="form['name'].errors && form['name'].errors?.['required']">This is the required field.</small>
+                <small *ngIf="form['name'].errors && form['name'].errors?.['minlength']">Should have at least 4 characters.</small>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" formControlName="email" id="email" class="form-control form-control-sm" placeholder="Enter Email" />
+              <span *ngIf="submitted || form['email'].touched || form['email'].dirty && form['email'].invalid"
+                    class="info-msg text-danger">
+                <small
+                  *ngIf="form['email'].errors && form['email'].errors?.['required']">This is the required field.</small>
+                <small *ngIf="form['email'].errors && form['email'].errors?.['minlength']">Should have at least 4 characters.</small>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" formControlName="password" id="password" class="form-control form-control-sm" placeholder="Enter Password" />
+              <span *ngIf="submitted || form['password'].touched || form['password'].dirty && form['password'].invalid"
+                    class="info-msg text-danger">
+                <small
+                  *ngIf="form['password'].errors && form['password'].errors?.['required']">This is the required field.</small>
+                <small *ngIf="form['password'].errors && form['password'].errors?.['minlength']">Should have at least 4 characters.</small>
+              </span>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="text" name="mobileNumber" formControlName="mobileNumber" id="mobileNumber" class="form-control form-control-sm" placeholder="Enter Mobile Number" />
+              <span *ngIf="submitted || form['mobileNumber'].touched || form['mobileNumber'].dirty && form['password'].invalid"
+                    class="info-msg text-danger">
+                <small
+                  *ngIf="form['mobileNumber'].errors && form['mobileNumber'].errors?.['required']">This is the required field.</small>
+                <small *ngIf="form['mobileNumber'].errors && form['mobileNumber'].errors?.['minlength']">Should have at least 4 characters.</small>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <button (click)="onEditDetails()" class="btn w-25 btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

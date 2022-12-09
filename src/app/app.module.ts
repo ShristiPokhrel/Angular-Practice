@@ -14,6 +14,7 @@ import { UserListComponent } from './user-management/user-list/user-list.compone
 import { AddUserComponent } from './user-management/add-user/add-user.component';
 import { EditUserComponent } from './user-management/edit-user/edit-user.component';
 import {HttpClientModule} from '@angular/common/http';
+import { DetailViewComponent } from './user-management/detail-view/detail-view.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     UserListComponent,
     AddUserComponent,
     EditUserComponent,
+    DetailViewComponent,
   ],
   imports: [
     BrowserModule,
